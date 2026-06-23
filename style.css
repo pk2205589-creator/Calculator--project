@@ -1,0 +1,46 @@
+/*Styles applied to the entire webpage*/
+body{
+display:flex; /*Uses Flexbox layout */
+justify-content:center; /*Horizontally centers the calculator*/
+align-items:center; /*Vertically centers the calculator*/
+height:100vh; /*Makes the body height equal to the full browser window*/
+background:linear-gradient(135deg,#1f1f1f,#3d3d3d); /*Creates a diagonal background. 
+                                            Starts from top-left and ends to bottom-right*/
+font-family:Arial,sans-serif;/*Sets the font style for the entire page*/
+}
+.calculator{ /*Main Claculator container*/
+background:rgba(255,255,255,0.1); /*Semi-transparent white background. Gives a glass-like appearance*/
+     /*rgba: Red, Green, Blue, Opacity (10% visible)*/
+backdrop-filter:blur(10px);/*Blurs the content behind the calculator. Creates Glassmorphism effect*/
+padding:20px; /*Space inside the calculator box*/
+border-radius:20px; /*Rounds the corners of the calculator*/
+box-shadow:0 8px 32px rgba(0,0,0,0.3); /*Adds a shadow around the calculator
+                    Syntax: Horizontal-offset Vertical-offset Blur-radius Shadow-Color*/
+width:320px;/*Sets calculator width*/
+}
+#display{ /*Calculator display screen*/
+width:100%; /*Takes full width of parent container*/
+height:60px; /*Height of display screen*/
+font-size:24px;/*Size of displayed numbers*/
+text-align:right;/*Aligns text to the right like a real calculator*/
+margin-bottom:15px; /*Adds space below the display*/
+border:none; /*Removes default input border*/
+border-radius:10px;/*Rounds display corners*/
+padding:10px;/*Creates inner spacing*/
+}
+.buttons{ /*Container holding all buttons*/
+display:grid; /*Uses CSS grid layout*/
+grid-template-columns:repeat(4,1fr);/*Creates 4 equal-width columns
+        repeat(4,1fr) means: 4 columns, each taking equal space*/
+gap:10px; /*Space between buttons*/
+}
+button{ /*Styling for all buttons*/
+padding:15px;/*Internal spacing inside buttons*/
+font-size:18px;/*Size of button text*/
+border:none;/*Removes default browser border*/
+border-radius:10px;/*Rounds button corners*/
+cursor:pointer;/*Changes mouse pointer to hand icon*/
+}
+button:hover{ /*Hover effect when mouse moves over a button*/
+    transform:scale(1.05);/*Enlarges button slightly (5%) */
+}
